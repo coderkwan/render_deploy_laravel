@@ -1,8 +1,6 @@
 FROM richarvey/nginx-php-fpm:latest
 
-# Install Additional System Dependencies
-RUN apt-get update && apt-get install -y \
-    nodejs \
+RUN apk add --update nodejs \
     npm
 
 COPY . .
